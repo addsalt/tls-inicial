@@ -281,7 +281,7 @@ header {
 }
 
 .scl-child {
-    margin-top: 1.5rem;
+    margin-top: .75rem;
 }
 
 .scl-child>ul li{
@@ -297,37 +297,23 @@ header {
 @media only screen and (min-width: 60em) {
 
     .second-level {
-        position: fixed;
-        width: calc(100% - 13rem);
+        position: absolute;
+        width: 16rem;
         margin-left: 13rem;
-        height: 100vh;
-        padding: 7%;
+        height: auto;
+        padding: 2% 7%;
+        padding-bottom: 1rem;
         background-color: rgba(36, 37, 35,.95);
+        overflow: auto;
     }
 
     .scl-child {
         display: block;
-        float: left;
-        font-size: 1.5rem;
-        width: 33.333%;
-        padding-right: 2rem;
-    }
-    
-    .clear {
-        clear: both;    
-    }   
+        margin-top: 0.75rem;
+    } 
 
-    .scl-child>ul {
-        margin-top: .75rem;
-    }
-    
     .scl-child>ul li{
-        font-size: 1rem;
-        margin-top: .65rem;
-    }
-    
-    .second-line {
-        margin-top: 3rem;
+        margin-top: .35rem;
     }
     
     .second-level ul a.feature {
@@ -335,8 +321,6 @@ header {
         position: relative;
         display: block;
         width: 30%;
-        margin-top: 1.5rem;
-        padding-top: .5rem;
     }
 
 }
