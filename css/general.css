@@ -1,0 +1,644 @@
+/* CSS */
+
+/* Colores
+Nav black: #242523
+Green: #a4cd39
+*/
+
+/* General */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:after,
+*::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+::selection {
+	background-color: rgba(77, 87, 96, .1);
+}
+
+.flex-img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+html {font-size: 1em; width: 100%; height: 100%;}
+
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    letter-spacing: 0.005em;
+    background-color: #fff;
+    line-height: 1.35;
+    color: #303030;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    letter-spacing: 0.001em;
+}
+
+.content-padding {
+    padding: 5%;
+}
+
+@media only screen and (min-width: 50em) and (min-height: 35.875em) {
+    
+    main {
+        width: calc(100% - 13rem);
+    }
+    
+    .content {
+        margin-left: 13rem;
+    }
+
+    .background {
+        background-color: #f4f4f4;
+    }
+}
+
+/* Typography */
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+h1, .uno {
+  font-size: 3.157em;
+}
+
+h2, .dos {font-size: 2.369em;}
+
+h3, .tres {font-size: 1.777em;}
+
+h4, .cuatro {font-size: 1.333em;}
+
+small, .font_small {font-size: 0.75em;}
+
+.extra_small {font-size: 0.625em;}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.display-block {
+    display: block;
+}
+
+.flex-img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Toggle Nav */
+
+.no-margin {
+    margin: 0;
+}
+
+header {
+    z-index: 9;
+}
+
+.hide-text {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.nav-btn,
+.nav-btn:link,
+.nav-btn:visited{
+	z-index: 9;
+	display: block;
+    position: fixed;
+    top: 10px;
+	left: 10px;
+	height: 20px;
+	width: 25px;
+	background: transparent url('../images/nav.png') no-repeat center center;
+	background-size: 20px; 
+	-webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.nav-btn:hover,
+.nav-btn:focus,
+.nav-btn:active{
+}
+
+.nav a, 
+.nav a:link,
+.nav a:visited{
+	text-decoration: none;
+	-webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.nav a:hover,
+.nav a:focus,
+.nav a:active{
+}
+
+/* Toggle */
+
+.nav-top{
+	display: none;
+}
+
+.nav-top[data-state="expanded"]{
+	display: block;
+}
+
+/* Navigation */ 
+
+.left-nav {
+    height: auto;
+    overflow: visible;
+    width: 100%;
+    left: 0;
+    z-index: 9;
+    background-color: #fff;
+    font-weight: 700;
+}
+
+.logo {
+    max-width: 80px;
+    margin-top: 1rem;
+}
+
+.main-element {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0.3rem 1em;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.light {
+    font-weight: 400;
+}
+
+.intranet {
+    margin-top: 1rem;
+}
+
+.intranet li a {
+    color: #ba33a3;
+}
+
+.social-media {
+    margin-bottom: 0.5rem;
+}
+
+.social-media img {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+}
+
+.contact {
+    position: relative;
+    padding: 0.3rem 1em;
+}
+
+.contact p {
+    margin-bottom: .75rem;
+}
+
+.active {
+    border-left: solid 6px #a4cd39; 
+    padding-left: 10px;
+    background-color: #303030;
+    color: #fff;
+}
+
+[data-state="active"] {
+    background-color: #303030;
+    color: #fff;
+}
+
+[data-state="active"]>.main-element{
+    border-left: solid 6px #a4cd39; 
+    padding-left: 10px;
+}
+
+.second-level {
+    width: 100%;
+    z-index: 3;
+    top:0;
+    display: none;
+    margin-left: 2em;
+    padding-bottom: 2rem;
+}
+
+.second-level[data-state="visible"] {
+    display: block;
+}
+
+.second-level li a {
+    color: #a4cd39;
+}
+
+.second-level ul a {
+    color: #efefef;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.second-level ul a:hover {
+    color: #d667c3;
+}
+
+.scl-child {
+    margin-top: 1.5rem;
+}
+
+.scl-child>ul li{
+    margin-top: .45rem;
+    font-weight: 400;
+}
+
+.second-level ul a.feature {
+    font-weight: 700;
+    color: #23a7bb;
+}
+
+@media only screen and (min-width: 60em) {
+
+    .second-level {
+        position: fixed;
+        width: calc(100% - 13rem);
+        margin-left: 13rem;
+        height: 100vh;
+        padding: 7%;
+        background-color: rgba(36, 37, 35,.95);
+    }
+
+    .scl-child {
+        display: block;
+        float: left;
+        font-size: 1.5rem;
+        width: 33.333%;
+        padding-right: 2rem;
+    }
+    
+    .clear {
+        clear: both;    
+    }   
+
+    .scl-child>ul {
+        margin-top: .75rem;
+    }
+    
+    .scl-child>ul li{
+        font-size: 1rem;
+        margin-top: .65rem;
+    }
+    
+    .second-line {
+        margin-top: 3rem;
+    }
+    
+    .second-level ul a.feature {
+        border-top: solid 2px #23a7bb;
+        position: relative;
+        display: block;
+        width: 30%;
+        margin-top: 1.5rem;
+        padding-top: .5rem;
+    }
+
+}
+
+@media only screen and (min-width: 50em) and (min-height: 37.875em) {
+		
+	.nav-btn,
+	.nav-btn:link,
+	.nav-btn:visited{
+		display: none;
+	}
+	
+	.nav-top{
+		display: inline-block;
+	}
+    
+    .logo {
+        max-width: 110px;
+        margin: 1rem auto;
+    }
+	
+    .left-nav {
+        height: 100vh;
+        width: 13rem;
+        position: fixed;
+        left: 0;
+        z-index: 9;
+    }
+    
+    .contact {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 60em) and (max-height: 42.125em) {
+    .logo {
+        max-width: 50px;
+    }
+}
+
+
+/* Top Nav */
+
+.extra-nav {
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    padding-left: 14rem;
+    background-color: transparent;
+    z-index: 8;
+    top:0;
+}
+
+.button {
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    background-color: transparent;
+    position: absolute;
+    padding: 7px 8px;
+    border: solid 2px white;
+    top: 0;
+    right: 0;
+    -webkit-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+
+.search {
+    color: #fff;
+    top: 0;
+    right: 38px;
+    background: url(../images/search.png) no-repeat center center;
+    background-size: 16px 16px;
+}
+
+.searchbar {
+    display: block;
+    max-width: 0px;
+    width: 300px;
+    right: 76px;
+    padding: 0;
+    border-left: 0;
+    -webkit-transition: all 300ms linear;
+    -transition: all 300ms linear;
+}
+
+.searchbar[data-state="open"]{
+    display: block;
+    max-width: 300px;
+    padding: 7px 8px;
+    border-left: solid 2px white;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color: #fff;
+    opacity: .5;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+    opacity: .5
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #fff;
+    opacity: .5
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color: #fff;
+    opacity: .5
+}
+
+.button:hover {
+    background-color: rgba(255,255,255,.6);
+}
+
+/* Content styling */
+
+.intro {
+    min-height: 100vh;
+    background: white url(../images/people1.jpg) no-repeat center center;
+    background-size: cover;
+    padding-top: 12%;
+}
+
+.intro>h1 {
+    background-color: #fff;
+    display: inline-block;
+}
+
+.slogan {
+    width: 100%;
+    margin-top: 1rem;
+    color: black;
+}
+
+.seeall {
+    display: block;
+    margin-top: .45rem;
+}
+
+.flex-img-50 {
+    width: 50%;
+    float: left;
+}
+
+.bloque {
+    background-color: rgba(255, 255, 255,.9);
+    width: 40%;
+    margin-top: 4rem;
+    margin-right: 2%;
+    float: left;
+    padding: 2%;
+    -webkit-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+
+.link-bloque:hover>.bloque {
+    background-color: rgba(255, 255, 255,.3);
+}
+
+@media only screen and (min-width: 60em) {
+    
+    .bloque {
+        width: 32%;
+        margin-top: 7rem;
+        margin-right: 2%;
+    }
+    
+    .seeall {
+        display: inline-block;
+        float: right;
+        text-align: right;
+        padding-right: 5rem;
+        margin-top: 2rem;
+    }
+    
+    .slogan {
+        width: 60%;
+    }
+}
+
+
+/* Interna */
+
+.intro-2 {
+    min-height: 100vh;
+    background-image: url(../images/interna.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top: 12%;
+    color: #fff;
+}
+
+.intro-2 h1 {
+    margin-top: 1.5rem;
+}
+
+.intro-2 small a {
+    text-decoration: underline;
+}
+
+.intro-2 .slogan {
+    color: #fff;
+}
+
+.i-nav {
+    display: none;
+}
+
+.internal-nav {
+    pointer-events: visible;
+    position: relative;
+    text-align: right;
+    color: white;
+    z-index: 9;
+    margin-top: 11rem;
+    margin-right: 5%;
+    border-right: solid 5px white;
+    padding-right: 20px;
+}
+
+.internal-nav li a {
+    display: inline-block;
+    margin: 0.25em 0;
+    position: relative;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.internal-nav li a:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: white;
+    height: 5px;
+    width: 0;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+}
+
+.internal-nav li a:hover:before {
+    right: -40px;
+    width: 20px;
+}
+
+.main {
+    font-weight: 600;
+}
+
+.on-light a {
+    color: black;
+}
+
+.on-light .internal-nav {
+    border-right: solid 5px black;
+}
+
+.on-light .internal-nav li a:before {
+    background-color: black;
+}
+
+.boton-enlinea {
+    border: solid 2px white;
+    padding: 0.45em 0.65em;
+}
+
+.prompter {
+    border-left: solid 2px #23a7bb;
+    padding-left: 10px;
+    color: #23a7bb;
+    margin-top: 5rem;
+}
+
+.prompter li {
+    margin: 0.45em 0;
+}
+
+.prompter li:first-child {
+    font-weight: 700;
+}
+
+@media only screen and (min-width: 60em) { 
+
+    .i-nav {
+        position: fixed;
+        display: block;
+        width: 100%;
+        height: 100%;
+        z-index: 8;
+        pointer-events: none;
+        color: #fff;
+    }
+    
+    .internal-content {
+        padding-right: 30%;
+    }
+    
+}
