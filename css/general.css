@@ -52,6 +52,7 @@ body {
     height: 100%;
     position: relative;
     letter-spacing: 0.001em;
+    display: relative;
 }
 
 .content-padding {
@@ -74,14 +75,17 @@ body {
 p {margin-bottom: 1.3em;}
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  font-weight: inherit;
-  line-height: 1.2;
-  font-weight: 700;
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 h1, .uno {
-  font-size: 3.157em;
+    font-size: 3.157em;
+    text-transform: uppercase;
+    padding: 12px 18px;
 }
 
 h2, .dos {font-size: 2.369em;}
@@ -469,6 +473,10 @@ header {
     padding-top: 12%;
 }
 
+.boxes-grid {
+    padding-top: 8%;
+}
+
 .intro>h1 {
     background-color: #fff;
     display: inline-block;
@@ -535,31 +543,38 @@ header {
 
 .intro-2 {
     min-height: 100vh;
-    background-image: url(../images/interna.jpg);
+    background-image: url(../images/intro-2.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     padding-top: 12%;
-    color: #fff;
 }
 
 .intro-2 h1 {
-    margin-top: 1.5rem;
-}
-
-.intro-2 small a {
-    text-decoration: underline;
+    max-width: 22rem;
 }
 
 .intro-2 .slogan {
     color: #fff;
 }
 
+.intro-2 .images {
+    height: 50px;
+}
+
+.intro-2 .images li {
+    display: inline-block;
+}
+
+.intro-2 img {
+    height: 50px;
+}
+
 
 .internal-nav {
     pointer-events: visible;
     width: 100%;
-    z-index: 9;
+    z-index: 7;
     background-color: white;
 }
 
@@ -578,11 +593,32 @@ header {
     
 @media only screen and (min-width: 60em) { 
 
+    .holder {
+        display: relative;
+    }
+    
+    .slides {
+        display: absolute;
+    }
+    
     .internal-nav {
         width: 250px;
         position: absolute;
         top: 8rem;
         right: 5%;
+    }
+    
+    .gutter {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    .gutter-left {
+        padding-left: 1em;
+    }
+
+    .gutter-right {
+        padding-right: 1em;
     }
     
 }
@@ -627,6 +663,33 @@ header {
     
     .intro {
         padding-left: 20rem;
+        position: relative;
     }
     
 }
+
+.event-block {
+    padding: 15% 12% 15% 11%;
+    margin-bottom: .35rem;
+    background-color: white;
+}
+
+.event-block-holder {
+    display: inline-block;
+    clear: both;
+    width: 32.33%;
+}
+
+.separate {
+    display: block;
+    margin: 10px 0;
+}
+
+.active-1 {
+    background-color: #bf33bf;
+}
+
+.active-2 {
+    background-color: #add347;
+}
+
