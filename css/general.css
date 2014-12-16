@@ -793,7 +793,7 @@ header {
     cursor: pointer;
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
-    margin-right: 10px;
+    margin-right: 12px;
 }
 
 .empty-holder {
