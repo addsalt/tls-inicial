@@ -729,7 +729,7 @@ header {
     width: 100%;
     position: absolute;
     top: 0;
-    padding: 6rem 5%;
+    padding: 5rem 2%;
 }
 
 @media only screen and (min-width: 50em) {  
@@ -737,7 +737,6 @@ header {
     .slide {
         padding: 8rem 19rem 0;
     }
-    
 }
 
 .first-slide {
