@@ -342,7 +342,7 @@ header {
 	}
     
     .logo {
-        max-width: 110px;
+        max-width: 190px;
         margin: 1rem auto;
     }
 	
@@ -362,9 +362,11 @@ header {
 }
 
 @media only screen and (min-width: 60em) and (max-height: 42.125em) {
+    
     .logo {
-        max-width: 50px;
+        max-width: 110px;
     }
+    
 }
 
 
