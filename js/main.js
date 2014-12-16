@@ -10,3 +10,9 @@ $(".nav-i>li").on('click',function(){
         $(this).attr('data-state', 'active');
     }
 });
+
+
+$('.right-arrow').on('click',function(){
+    var $slides = $('.slide');
+    $slides.css({screenLeft:marginCalc+'%'});
+});
