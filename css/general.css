@@ -805,7 +805,31 @@ header {
     background-color: rgba(255,255,255,.7)
 }
 
+.bx-wrapper {
+    margin: 0 auto;
+}
 
 .bx-default-pager {
     display: none;
+}
+
+.bx-wrapper .bx-controls-direction a {
+position: absolute;
+top: 50%;
+margin-top: -16px;
+outline: 0;
+width: 32px;
+height: 32px;
+text-indent: -9999px;
+z-index: 9999;
+}
+
+.bx-wrapper .bx-prev {
+left: 0px;
+background: url(images/controls.png) no-repeat 0 -32px;
+}
+
+.bx-wrapper .bx-next {
+right: 0px;
+background: url(images/controls.png) no-repeat -43px -32px;
 }
