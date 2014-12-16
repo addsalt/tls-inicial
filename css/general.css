@@ -52,7 +52,7 @@ body {
     height: 100%;
     position: relative;
     letter-spacing: 0.001em;
-    display: relative;
+    position: relative;
 }
 
 .content-padding {
@@ -477,17 +477,6 @@ header {
     padding-top: 8%;
 }
 
-.intro>h1 {
-    background-color: #fff;
-    display: inline-block;
-}
-
-.slogan {
-    width: 100%;
-    margin-top: 1rem;
-    color: black;
-}
-
 .seeall {
     display: block;
     margin-top: .45rem;
@@ -550,27 +539,6 @@ header {
     padding-top: 12%;
 }
 
-.intro-2 h1 {
-    max-width: 22rem;
-}
-
-.intro-2 .slogan {
-    color: #fff;
-}
-
-.intro-2 .images {
-    height: 50px;
-}
-
-.intro-2 .images li {
-    display: inline-block;
-}
-
-.intro-2 img {
-    height: 50px;
-}
-
-
 .internal-nav {
     pointer-events: visible;
     width: 100%;
@@ -579,9 +547,10 @@ header {
 }
 
 .internal-nav li a {
+    font-size: 0.7rem;
     display: inline-block;
     width: 100%;
-    padding: 0.25em 0.4em;
+    padding: 0.7rem 1em;
     position: relative;
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease;
@@ -593,19 +562,11 @@ header {
     
 @media only screen and (min-width: 60em) { 
 
-    .holder {
-        display: relative;
-    }
-    
-    .slides {
-        display: absolute;
-    }
-    
     .internal-nav {
-        width: 250px;
+        width: 230px;
         position: absolute;
-        top: 8rem;
-        right: 5%;
+        top: 4rem;
+        right: 2rem;
     }
     
     .gutter {
@@ -621,22 +582,6 @@ header {
         padding-right: 1em;
     }
     
-}
-
-.main {
-    font-weight: 600;
-}
-
-.on-light a {
-    color: black;
-}
-
-.on-light .internal-nav {
-    border-right: solid 5px black;
-}
-
-.on-light .internal-nav li a:before {
-    background-color: black;
 }
 
 .boton-enlinea {
@@ -659,13 +604,9 @@ header {
     font-weight: 700;
 }
 
-@media only screen and (min-width: 50em) { 
-    
-    .intro {
-        padding-left: 20rem;
-        position: relative;
-    }
-    
+.event-block-holder {
+    display: inline-block;
+    clear: both;
 }
 
 .event-block {
@@ -674,10 +615,19 @@ header {
     background-color: white;
 }
 
-.event-block-holder {
-    display: inline-block;
-    clear: both;
-    width: 32.33%;
+
+@media only screen and (min-width: 50em) { 
+    
+    .intro {
+        padding-left: 20rem;
+        position: relative;
+    }
+    
+    .event-block-holder {
+        display: inline-block;
+        clear: both;
+        width: 32.33%;
+    }
 }
 
 .separate {
@@ -693,3 +643,118 @@ header {
     background-color: #add347;
 }
 
+
+.main-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+@media only screen and (min-width: 50em) {  
+ 
+    .slide {
+        padding: 8rem 19rem 0;
+    }
+    
+}
+
+.first-slide {
+    background-image: url(../images/intro-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.second-slide {
+    background-image: url(../images/people1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    left: 100%;
+}
+
+.third-slide {
+    background-image: url(../images/intro-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    left: 200%;
+}
+
+.fourth-slide {
+    background-image: url(../images/intro-3.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    left: 300%;
+}
+
+.images li {
+    display: inline-block;
+}
+
+.img-button img {
+    height: 80px;
+}
+
+.first-slide > h1 {
+    background-color: #fff;
+    display: inline-block;
+}
+
+.slogan {
+    width: 100%;
+    margin-top: 1rem;
+    color: black;
+}
+
+.second-slide h1, .third-slide h1 {
+    max-width: 22rem;
+    background-color: white;
+}
+
+@media only screen and (min-width: 50em) {  
+    
+    .first-slide > h1 {
+        margin-top: 19rem;
+    }
+    
+    .slogan {
+        max-width: 30rem;
+    }
+    
+    .third-slide > h1 {
+        margin-top: 16rem;
+    }
+    
+}
+
+.caja-cont {
+    padding: .45%;
+}
+
+.caja { 
+    background-color: white;
+    padding: 2%;
+    min-height: 11.5rem;
+}
