@@ -709,6 +709,8 @@ header {
     position: relative;
 }
 
+
+
 .arrow {
     position: absolute;
     top: 50%;
@@ -727,6 +729,7 @@ header {
     width: 100%;
     position: absolute;
     top: 0;
+    padding: 6rem 5%;
 }
 
 @media only screen and (min-width: 50em) {  
@@ -827,7 +830,7 @@ header {
 }
 
 .interna-contenido {
-    padding: 2%;
+    padding: 4%;
 }
 
 @media only screen and (min-width: 50em) { 
