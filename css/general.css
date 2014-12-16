@@ -826,10 +826,10 @@ header {
 
 .bx-wrapper .bx-prev {
     left: 0px;
-    background: white url(images/arrow-left.png) no-repeat 0 -32px;
+    background: white url(images/arrow-left.png) no-repeat center center;
 }
 
 .bx-wrapper .bx-next {
-right: 0px;
-background: white url(images/arrow-right.png) no-repeat -43px -32px;
+    right: 0px;
+    background: white url(images/arrow-right.png) no-repeat center center;
 }
