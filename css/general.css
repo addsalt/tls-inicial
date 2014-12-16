@@ -806,7 +806,7 @@ header {
 }
 
 .bx-wrapper {
-    margin: 0 auto;
+    margin: 0 auto 0;
 }
 
 .bx-default-pager {
