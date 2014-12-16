@@ -820,8 +820,8 @@ header {
     outline: 0;
     width: 32px;
     height: 32px;
-    text-indent: -9999px;
-    z-index: 9999;
+    text-indent: 0;
+    z-index: 0;
 }
 
 .bx-wrapper .bx-prev {
