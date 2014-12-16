@@ -360,7 +360,9 @@
     <script src="../tls-inicial/js/nav.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
-          $('.bxslider').bxSlider();
+          $('.bxslider').bxSlider({
+            nextSelector: '#slider-next',
+            prevSelector: '#slider-prev',
         });
     </script>
     <script>
